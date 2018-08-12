@@ -1,0 +1,20 @@
+No.,Course No.,Course Title,Credit,Type,Sec.,Date,Time,Bldg.,Room,Instructors,Dept.,Amoun,Remark
+1,2143101,Introduction to ICE,3 (3-0-6),Lect.,1,Wed,13.00-16.00,EN 100,404,Staff,EE,62,
+2,2182202,Advanced Mathematics Methods,3 (3-0-6),Lect.,1,Mon,09.00-12.00,ENG 2,210,"Asst.Prof.Charnchai Pluempitiwiriyawej, Ph.D.",EE,62,
+3,2182211,Electrical Circuit for ICE,2 (2-0-4),Lect.,1,Fri,09.00-12.00,ENG 2,303/2,"Yan Zhao, Ph.D.",ISE,62,
+4,2182212,"Fundamental of Circuit and Digital
+Electronics Laboratory",1 (0-3-0),Lab.,1,Mon,13.00-16.00,EE LAB,EE LAB,"Ajarn. Bunchauy Supmonchai
+Asst. Prof. Suree Pumrin, Ph.D.
+Panuwat Janpugdee, Ph. D.
+Yan Zhao, Ph.D.",EE,26,
+4,2182212,"Fundamental of Circuit and Digital
+Electronics Laboratory",2,Tue,09.00-12.00,EE LAB,EE LAB,EE,26,,
+4,2182212,"Fundamental of Circuit and Digital
+Electronics Laboratory",3,Tue,13.00-16.00,EE LAB,EE LAB,EE,26,,
+5,2190102,Advanced Computer Programming,2 (2-0-4),Lect.,1,Thu,09.00-11.00,ENG 2,305,"Asst. Prof. Sukree Sinthupinyo, Ph.D.
+Pitchaya Sitthi-amorn, Ph.D.",CP,62,
+6,2190152,"Advanced Computer Programming
+Laboratory",1 (0-3-0),Lab.,1,Fri,13.00-16.00,ENG 3,219,"Pitchaya Sitthi-amorn, Ph.D.",CP,32,
+6,2190152,"Advanced Computer Programming
+Laboratory",1 (0-3-0),Lab.,3,Fri,13.00-16.00,ENG 3,220,"Asst. Prof. Sukree Sinthupinyo, Ph.D.",CP,32,
+7,2190200,Discrete Structure,3 (3-0-6),Lect.,1,Wed,09.00-12.00,ENG 2,302,"Kunwadee Sripanidkulchai, Ph.D.",CP,62,

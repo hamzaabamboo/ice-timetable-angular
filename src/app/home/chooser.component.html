@@ -1,0 +1,32 @@
+<mat-accordion>
+    <mat-expansion-panel *ngFor="let subject of subjects">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                {{ subject.name }}
+            </mat-panel-title>
+            <mat-panel-description>
+                {{ subject.id + ' ' + subject.credit }}
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-selection-list>
+            <mat-list-option *ngFor="let section of getSections(subject.sections)">
+                {{ parseSection(subject.sections[section], section) }}
+            </mat-list-option>
+        </mat-selection-list>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                General Education
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-selection-list>
+            <mat-list-option>
+                Morning
+            </mat-list-option>
+            <mat-list-option>
+                Afternoon
+            </mat-list-option>
+        </mat-selection-list>
+    </mat-expansion-panel>
+</mat-accordion>
