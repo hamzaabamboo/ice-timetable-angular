@@ -102,8 +102,8 @@
     tslib "^1.9.0"
 
 "@angular/cdk@^6.4.3":
-  version "6.4.3"
-  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-6.4.3.tgz#4881276b25ab91e7cb8378bc94ea36dbaa0da987"
+  version "6.4.4"
+  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-6.4.4.tgz#0ab96a31b1949f12dab0f3f35134bf821498aa71"
   dependencies:
     tslib "^1.7.1"
 
@@ -166,8 +166,8 @@
   resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-6.1.2.tgz#221d0b50d68ec10c7b47166a11750070f5a193bd"
 
 "@angular/material@^6.4.3":
-  version "6.4.3"
-  resolved "https://registry.yarnpkg.com/@angular/material/-/material-6.4.3.tgz#a3c8a9e423bdbf2507193a9ce6eed8a4f57d369a"
+  version "6.4.4"
+  resolved "https://registry.yarnpkg.com/@angular/material/-/material-6.4.4.tgz#5b4f82601636598957f1684d3ecd570d9d75ca05"
   dependencies:
     tslib "^1.7.1"
   optionalDependencies:
@@ -1092,8 +1092,8 @@ camelcase@^4.1.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
 
 caniuse-lite@^1.0.30000844, caniuse-lite@^1.0.30000864:
-  version "1.0.30000874"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000874.tgz#a641b1f1c420d58d9b132920ef6ba87bbdcd2223"
+  version "1.0.30000876"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000876.tgz#69fc1b696a35fd91089061aa916f677ee7057ada"
 
 caseless@~0.12.0:
   version "0.12.0"
@@ -1955,8 +1955,8 @@ es-to-primitive@^1.1.1:
     is-symbol "^1.0.1"
 
 es5-ext@^0.10.35, es5-ext@^0.10.9, es5-ext@~0.10.14:
-  version "0.10.45"
-  resolved "https://registry.yarnpkg.com/es5-ext/-/es5-ext-0.10.45.tgz#0bfdf7b473da5919d5adf3bd25ceb754fccc3653"
+  version "0.10.46"
+  resolved "https://registry.yarnpkg.com/es5-ext/-/es5-ext-0.10.46.tgz#efd99f67c5a7ec789baa3daa7f79870388f7f572"
   dependencies:
     es6-iterator "~2.0.3"
     es6-symbol "~3.1.1"
@@ -2324,8 +2324,8 @@ flush-write-stream@^1.0.0:
     readable-stream "^2.0.4"
 
 follow-redirects@^1.0.0:
-  version "1.5.2"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.5.2.tgz#5a9d80e0165957e5ef0c1210678fc5c4acb9fb03"
+  version "1.5.4"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.5.4.tgz#86d1bb946f24cb988d660aaa2ca2478c0772ead1"
   dependencies:
     debug "^3.1.0"
 
