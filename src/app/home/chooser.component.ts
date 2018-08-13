@@ -10,6 +10,10 @@ import { SelectedService } from "./selected.service";
 })
 export class ChooserComponent implements OnInit {
   subjects: Subject[];
+  gened: { name: String; time: String } = {
+    name: "",
+    time: ""
+  };
 
   constructor(
     private subjectService: SubjectService,
@@ -24,8 +28,8 @@ export class ChooserComponent implements OnInit {
     return Object.keys(sections);
   }
 
-  change(stuff) {
-    this.selectedService.addSelected(stuff.id, stuff.selected);
+  change(stuff, isGened = false) {
+    this.selectedService.addSelected(stuff, isGened && this.gened);
   }
 
   parseSection(section: any, id: string): string {
@@ -37,6 +41,5 @@ export class ChooserComponent implements OnInit {
 
   ngOnInit() {
     this.getSubjects();
-    console.log(this.subjects);
   }
 }

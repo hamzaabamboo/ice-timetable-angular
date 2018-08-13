@@ -7,8 +7,22 @@ import { Subject } from "./subject";
 })
 export class SubjectService {
   constructor() {}
-  query(subject, section) {
-    return SUBJECTS.filter(e => e.id === subject)[0].sections[section];
+  query(subjectId, sectionId, gened) {
+    if (gened) {
+      return {
+        section: {
+          times: [{ time: gened.time, day: "Thu" }]
+        },
+        name: gened.name
+      };
+    } else {
+      const subject = SUBJECTS.filter(e => e.id === subjectId)[0];
+      const section = subject.sections[sectionId];
+      return {
+        section,
+        name: subject.name
+      };
+    }
   }
   getSubjects(): Subject[] {
     return SUBJECTS.map(e => {

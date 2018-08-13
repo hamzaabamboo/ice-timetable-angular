@@ -1,27 +1,30 @@
 import { Injectable } from "@angular/core";
+import { BehaviorSubject } from "rxjs";
 
 @Injectable({
   providedIn: "root"
 })
 // TODO: RxJS
 export class SelectedService {
-  selected: any = [];
+  selected: BehaviorSubject<any[]> = new BehaviorSubject<any[]>([]);
   constructor() {}
 
-  addSelected(subject, section) {
-    this.removeSelected(subject, section);
-    this.selected.push({ subject, section });
+  addSelected({ id, selected }, gened = null) {
+    this.removeSelected(id, selected);
+    const subject = !gened
+      ? { subject: id, section: selected }
+      : { subject: id, section: selected, gened };
+    const newArr: any[] = [...this.selected.value, subject];
+    this.selected.next(newArr);
   }
 
   removeSelected(subject, section) {
-    this.selected = this.selected.filter(e => {
+    const newArr = this.selected.value.filter(e => {
       return e.subject !== subject;
     });
+    this.selected.next(newArr);
   }
 
-  subscribe() {
-    console.log("Plz subscribe");
-  }
   getSelected() {
     return this.selected;
   }
