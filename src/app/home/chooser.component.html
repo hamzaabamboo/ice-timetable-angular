@@ -8,11 +8,12 @@
                 {{ subject.id + ' ' + subject.credit }}
             </mat-panel-description>
         </mat-expansion-panel-header>
-        <mat-selection-list>
-            <mat-list-option *ngFor="let section of getSections(subject.sections)">
+        <mat-radio-group class="chooser-radio-group" [(ngModel)]="subject.selected" (change)="change(subject)" labelPosition="before"
+            value="getSections(subject.sections)[0]">
+            <mat-radio-button class="chooser-radio-button" *ngFor="let section of getSections(subject.sections)" [value]="section">
                 {{ parseSection(subject.sections[section], section) }}
-            </mat-list-option>
-        </mat-selection-list>
+            </mat-radio-button>
+        </mat-radio-group>
     </mat-expansion-panel>
     <mat-expansion-panel>
         <mat-expansion-panel-header>

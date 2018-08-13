@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from "@angular/core";
 import { Timetable, Renderer } from "../../lib/timetable";
+import { SelectedService } from "./selected.service";
 const DATES = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 @Component({
   selector: "app-timetable",
@@ -8,15 +9,24 @@ const DATES = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
   encapsulation: ViewEncapsulation.None
 })
 export class TimetableComponent implements OnInit {
+  timetable: Timetable;
+  constructor(private selectedService: SelectedService) {}
   ngOnInit() {
     try {
-      const timetable = new Timetable();
-      timetable.setScope(8, 18);
-      timetable.addLocations(DATES);
-      const renderer = new Renderer(timetable);
-      renderer.draw(".timetable"); // any css selector
+      this.timetable = new Timetable();
+      this.timetable.setScope(8, 18);
+      this.timetable.addLocations(DATES);
+      this.render();
     } catch (error) {
       console.log("lol broke", error);
     }
+    this.subscribe();
+  }
+  render() {
+    const renderer = new Renderer(this.timetable);
+    renderer.draw(".timetable"); // any css selector
+  }
+  subscribe() {
+    this.selectedService.subscribe();
   }
 }

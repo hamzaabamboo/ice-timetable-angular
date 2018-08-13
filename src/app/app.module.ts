@@ -11,6 +11,7 @@ import { MaterialModule } from "./material.module";
 import { TimetableComponent } from "./home/timetable.component";
 import { SubjectService } from "./subject.service";
 import { ChooserComponent } from "./home/chooser.component";
+import { SelectedService } from "./home/selected.service";
 
 @NgModule({
   imports: [
@@ -27,7 +28,7 @@ import { ChooserComponent } from "./home/chooser.component";
     TimetableComponent,
     ChooserComponent
   ],
-  providers: [SubjectService],
+  providers: [SubjectService, SelectedService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
