@@ -11,7 +11,15 @@
   top: 0;
   z-index: 999;
 }
+.mat-toolbar span {
+  width: 100%;
+  overflow: hidden;
+}
 
 .mat-card {
+  margin: 15px;
+}
+
+.wrapper {
   margin: 15px;
 }

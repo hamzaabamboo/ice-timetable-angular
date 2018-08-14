@@ -6,3 +6,7 @@
 .chooser-radio-button {
   margin: 5px;
 }
+.mat-radio-label-content.mat-radio-label-before {
+  word-break: break-word !important;
+  width: 100% !important;
+}

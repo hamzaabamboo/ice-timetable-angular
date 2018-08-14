@@ -2,6 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from "@angular/core";
 import { Timetable, Renderer } from "../../lib/timetable";
 import { SelectedService } from "./selected.service";
 import { SubjectService } from "../subject.service";
+import * as html2canvas from "html2canvas";
 import * as moment from "moment";
 
 const DATES = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
@@ -52,19 +53,25 @@ export class TimetableComponent implements OnInit {
           title,
           SHORT_DATES[time.day],
           moment()
-            .hour(parseInt(start.split(":")[0], 10))
-            .minute(parseInt(start.split(":")[0], 10))
+            .hour(parseInt(start.split(".")[0], 10))
+            .minute(parseInt(start.split(".")[1], 10))
             .toDate(),
           moment()
-            .hour(parseInt(end.split(":")[0], 10))
-            .minute(parseInt(end.split(":")[0], 10))
+            .hour(parseInt(end.split(".")[0], 10))
+            .minute(parseInt(end.split(".")[1], 10))
             .toDate()
         );
       });
     });
     this.render();
   }
-
+  saveTimetableImage() {
+    html2canvas(document.querySelector("#timetable")).then(canvas => {
+      // canvas is the final rendered <canvas> element
+      const myImage = canvas.toDataURL("image/png");
+      window.open(myImage);
+    });
+  }
   render() {
     const renderer = new Renderer(this.timetable);
     renderer.draw(".timetable"); // any css selector
