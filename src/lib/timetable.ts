@@ -197,7 +197,8 @@ export class Renderer {
       const start = event.startDate;
       const end = event.endDate;
       const durationHours = computeDurationInHours(start, end);
-      return (durationHours / scopeDurationHours) * 100 + "%";
+      // return (durationHours / scopeDurationHours) * 100 + "%";
+      return durationHours * 96 + "px";
     };
     const computeDurationInHours = (start, end) => {
       return (end.getTime() - start.getTime()) / 1000 / 60 / 60;
@@ -210,7 +211,8 @@ export class Renderer {
         scopeStartHours,
         eventStartHours
       );
-      return (hoursBeforeEvent / scopeDurationHours) * 100 + "%";
+      // return (hoursBeforeEvent / scopeDurationHours) * 100 + "%";
+      return hoursBeforeEvent * 96 + "px";
     };
 
     const scopeDurationHours = getDurationHours(
