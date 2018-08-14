@@ -12,7 +12,7 @@ export class SubjectService {
       return {
         section: {
           times: [{ time: gened.time, day: "Thu" }]
-        },
+      },
         name: gened.name
       };
     } else {

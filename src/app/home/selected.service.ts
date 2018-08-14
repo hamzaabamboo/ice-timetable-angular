@@ -6,7 +6,9 @@ import { BehaviorSubject } from "rxjs";
 })
 // TODO: RxJS
 export class SelectedService {
-  selected: BehaviorSubject<any[]> = new BehaviorSubject<any[]>([]);
+  selected: BehaviorSubject<any[]> = new BehaviorSubject<any[]>(
+    JSON.parse(window.localStorage.getItem("timetable")) || []
+  );
   constructor() {}
 
   addSelected({ id, selected }, gened = null) {
@@ -16,6 +18,7 @@ export class SelectedService {
       : { subject: id, section: selected, gened };
     const newArr: any[] = [...this.selected.value, subject];
     this.selected.next(newArr);
+    window.localStorage.setItem("timetable", JSON.stringify(newArr));
   }
 
   removeSelected(subject, section) {
